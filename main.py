@@ -103,6 +103,8 @@ class AddCoffeWidget(AddEditCoffeeForm):
             self.taste_description.setText(coffee_data[4])
             self.price.setText(str(coffee_data[5]))
             self.packing_volume.setText(str(coffee_data[6]))
+        else:
+            self.setWindowTitle("Добавление записи")
     
     def initUi(self) -> None:
         self.pushButton.clicked.connect(self.add_coffee)
